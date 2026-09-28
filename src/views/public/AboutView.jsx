@@ -1,9 +1,11 @@
 import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
-import { BookOpen, MapPin, Award, Rocket, GraduationCap } from 'lucide-react';
+import { BookOpen, MapPin, Award, Rocket, GraduationCap, Globe, ExternalLink } from 'lucide-react';
 
 export default function AboutView() {
   return (
+    <>
+      <SeoHead title="About Me | GURUPRASATH D" />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
       
       <div className="text-center space-y-4">
@@ -55,6 +57,46 @@ export default function AboutView() {
         </div>
 
         <div className="space-y-6 pt-8 border-t border-white/10">
+          
+        <div className="space-y-6 pt-8 border-t border-white/10">
+          <h3 className="text-xl font-bold text-white uppercase tracking-wider flex items-center gap-2">
+            <Globe className="text-[#c9a84c] w-6 h-6" /> Official Ecosystem
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="https://goatech.tech" target="_blank" rel="noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+              <div>
+                 <h4 className="text-sm font-bold text-white uppercase tracking-widest group-hover:text-[#c9a84c] transition-colors">GOAT'ECH Official</h4>
+                 <p className="text-xs text-gray-500 font-mono mt-1">goatech.tech</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-gray-600 group-hover:text-[#c9a84c] transition-colors" />
+            </a>
+            
+            <a href="https://maghs.tech" target="_blank" rel="noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+              <div>
+                 <h4 className="text-sm font-bold text-white uppercase tracking-widest group-hover:text-[#c9a84c] transition-colors">MAGH'S Technology</h4>
+                 <p className="text-xs text-gray-500 font-mono mt-1">maghs.tech</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-gray-600 group-hover:text-[#c9a84c] transition-colors" />
+            </a>
+
+            <a href="https://goatech.tech/team" target="_blank" rel="noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+              <div>
+                 <h4 className="text-sm font-bold text-white uppercase tracking-widest group-hover:text-[#c9a84c] transition-colors">Team ™SPARROW</h4>
+                 <p className="text-xs text-gray-500 font-mono mt-1">goatech.tech/team</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-gray-600 group-hover:text-[#c9a84c] transition-colors" />
+            </a>
+
+            <a href="https://goatech.tech/team/guruprasath-d" target="_blank" rel="noreferrer" className="flex items-center justify-between p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+              <div>
+                 <h4 className="text-sm font-bold text-white uppercase tracking-widest group-hover:text-[#c9a84c] transition-colors">Official Founder Profile</h4>
+                 <p className="text-xs text-gray-500 font-mono mt-1">goatech.tech/team/guruprasath-d</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-gray-600 group-hover:text-[#c9a84c] transition-colors" />
+            </a>
+          </div>
+        </div>
+
           <h3 className="text-xl font-bold text-white uppercase tracking-wider flex items-center gap-2">
             <Award className="text-[#c9a84c] w-6 h-6" /> Philosophy
           </h3>
@@ -64,6 +106,6 @@ export default function AboutView() {
         </div>
       </div>
     </div>
-  );
     </>
+  );
 }

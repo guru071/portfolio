@@ -13,6 +13,8 @@ export default function ContactView() {
   ];
 
   return (
+    <>
+      <SeoHead title="Contact | GURUPRASATH D" />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
       
       <div className="text-center space-y-4">
@@ -128,6 +130,6 @@ export default function ContactView() {
         </div>
       </div>
     </div>
-  );
     </>
+  );
 }

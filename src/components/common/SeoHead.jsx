@@ -31,7 +31,10 @@ export default function SeoHead({
       "https://www.linkedin.com/in/guru-prasath-bb8328382",
       "https://instagram.com/maghs.guruprasath",
       "https://youtube.com/@goat-u9m2v",
-      "https://x.com/goatechmaghs"
+      "https://x.com/goatechmaghs",
+      "https://goatech.tech",
+      "https://maghs.tech",
+      "https://goatech.tech/team/guruprasath-d"
     ],
     "address": {
       "@type": "PostalAddress",

@@ -1,6 +1,6 @@
 import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
-import { Briefcase, Code, Database, Layout, Terminal } from 'lucide-react';
+import { Briefcase, Code, Database, Layout, Terminal, Download, FileText } from 'lucide-react';
 
 export default function ResumeView() {
   const coreLanguages = [
@@ -26,11 +26,21 @@ export default function ResumeView() {
   ];
 
   return (
+    <>
+      <SeoHead title="Skills & Resume | GURUPRASATH D" />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
       
       <div className="text-center space-y-4">
         <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase">Skills & <span className="text-[#c9a84c]">Experience</span></h1>
         <p className="text-gray-400 font-medium text-lg">My technical arsenal and professional journey as a founder.</p>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+        <a href="/guruprasath-d-resume.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-white/5 border border-white/10 hover:bg-amber-500/10 hover:border-amber-500/30 transition-all uppercase tracking-widest text-sm w-full sm:w-auto justify-center">
+          <FileText className="w-5 h-5" /> View Resume
+        </a>
+        <a href="/guruprasath-d-resume.pdf" download="Guruprasath_D_Resume.pdf" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all uppercase tracking-widest text-sm w-full sm:w-auto justify-center">
+          <Download className="w-5 h-5" /> Download PDF
+        </a>
+      </div>
       </div>
 
       {/* Skills Matrix */}
@@ -131,6 +141,6 @@ export default function ResumeView() {
       </div>
 
     </div>
-  );
     </>
+  );
 }

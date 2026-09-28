@@ -67,6 +67,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://goatech.tech/team/abdul-kapur-s</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goatech.tech/team/abishek-r</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goatech.tech/wiki</loc>
+    <lastmod>2026-09-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://goatech.tech/leadership</loc>
     <lastmod>2026-09-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

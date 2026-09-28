@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 export default function HomeView() {
   return (
+    <>
+      <SeoHead title="GURUPRASATH D | Founder & CEO of GOAT'ECH" />
     <div className="space-y-32 py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       {/* Hero Section */}
@@ -74,6 +76,6 @@ export default function HomeView() {
       </div>
 
     </div>
-  );
     </>
+  );
 }
