@@ -22,7 +22,7 @@ export default function Footer() {
 
         <div className="flex flex-wrap justify-center gap-6">
           {profiles.map(p => (
-             <a key={p.name} href={p.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#c9a84c] uppercase tracking-widest transition-colors">
+             <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#c9a84c] uppercase tracking-widest transition-colors">
                <img src={`https://cdn.simpleicons.org/${p.icon}/888888`} alt={p.name} className="w-4 h-4" />
                {p.name}
              </a>

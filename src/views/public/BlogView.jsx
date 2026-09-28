@@ -4,12 +4,12 @@ import { ArrowRight, Calendar, Tag } from 'lucide-react';
 
 export default function BlogView() {
   const posts = [
-    {
-      title: "Building the GOAT'ECH Ecosystem from Scratch",
-      excerpt: "How we architected a scalable, multi-tenant platform using React, FastAPI, and PostgreSQL to serve multiple products under one umbrella.",
+        {
+      title: "My Main Project and Future is MaghGo",
+      excerpt: "MaghGo represents the pinnacle of the GOAT'ECH vision. It is more than just a project—it is the foundation of our future digital ecosystem.",
       date: "September 28, 2026",
-      category: "Architecture",
-      readTime: "8 min read"
+      category: "Vision",
+      readTime: "10 min read"
     },
     {
       title: "Why Nothing IDE is the Future of Minimalist Development",
