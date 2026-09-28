@@ -13,12 +13,12 @@ export default function HomeView() {
       <div className="relative glass-card rounded-[2rem] border border-amber-500/20 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-black to-black z-0"></div>
         
-        <div className="relative z-10 p-10 md:p-20 space-y-6 flex-1">
+        <div className="relative z-10 p-6 sm:p-10 md:p-20 space-y-6 flex-1">
           <div className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-[0.2em] font-bold shadow-[0_0_15px_rgba(201,168,76,0.3)]">
             Full Stack Developer | Architect
           </div>
           
-          <h1 className="text-5xl sm:text-7xl font-black text-white leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight tracking-tight">
             I am <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-yellow-600 drop-shadow-[0_0_25px_rgba(201,168,76,0.5)] whitespace-nowrap">GURUPRASATH D</span>
           </h1>
           
@@ -37,7 +37,7 @@ export default function HomeView() {
         </div>
 
         {/* Hero Image */}
-        <div className="relative z-10 w-full md:w-2/5 h-96 md:h-auto self-stretch bg-black border-l border-amber-500/20 hidden md:block">
+        <div className="relative z-10 w-full md:w-2/5 h-72 sm:h-96 md:h-auto self-stretch bg-black border-t md:border-t-0 md:border-l border-amber-500/20">
            <img 
               src="/images/team/guruprasath-d1.jpeg" 
               alt="Guruprasath D" 

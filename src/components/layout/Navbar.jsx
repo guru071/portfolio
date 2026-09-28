@@ -23,15 +23,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Brand */}
-          <Link to="/" className="flex items-center gap-4 group">
-            <div className="relative w-12 h-12 flex items-center justify-center rounded-xl overflow-hidden bg-white/5 border border-white/10 group-hover:border-amber-500/50 transition-all duration-500">
-              <img src="/images/goatech-logo.jpeg" alt="GOAT'ECH" className="w-10 h-10 object-contain rounded-lg" />
+          <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl overflow-hidden bg-white/5 border border-white/10 group-hover:border-amber-500/50 transition-all duration-500">
+              <img src="/images/goatech-logo.jpeg" alt="GOAT'ECH" className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-lg" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-widest text-white uppercase group-hover:text-amber-400 transition-colors whitespace-nowrap">
+              <span className="text-base sm:text-xl font-bold tracking-widest text-white uppercase group-hover:text-amber-400 transition-colors whitespace-nowrap">
                 GURUPRASATH D
               </span>
-              <span className="text-[10px] tracking-[0.2em] text-gray-400 font-mono font-bold uppercase">
+              <span className="text-[8px] sm:text-[10px] tracking-[0.1em] sm:tracking-[0.2em] text-gray-400 font-mono font-bold uppercase">
                 Founder & CEO @ GOAT'ECH
               </span>
             </div>
@@ -76,14 +76,14 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5">
-          <div className="px-4 pt-2 pb-6 space-y-1">
+        <div className="md:hidden absolute top-20 right-4 w-[50%] bg-black/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-4">
+          <div className="px-2 py-3 space-y-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-3 py-4 rounded-xl text-base font-bold uppercase tracking-widest ${
+                className={`block px-4 py-3 rounded-xl text-sm font-bold uppercase tracking-widest ${
                   isActive(item.href)
                     ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                     : 'text-gray-400 hover:bg-white/5 hover:text-white'
