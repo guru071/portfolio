@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block sensitive routes
+Disallow: /admin
+Disallow: /customer
+Disallow: /api/
+Disallow: /login
+Disallow: /register
+
+# Sitemaps for both domains
+Sitemap: https://goatech.tech/sitemap.xml
+Sitemap: https://maghs.tech/sitemap.xml
