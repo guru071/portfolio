@@ -8,6 +8,7 @@ export default function Navbar() {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Resume', href: '/resume' },
     { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '/contact' },
@@ -26,7 +27,7 @@ export default function Navbar() {
               <img src="/images/goatech-logo.jpeg" alt="GOAT'ECH" className="w-10 h-10 object-contain rounded-lg" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-widest text-white uppercase group-hover:text-amber-400 transition-colors">
+              <span className="text-xl font-bold tracking-widest text-white uppercase group-hover:text-amber-400 transition-colors whitespace-nowrap">
                 GURUPRASATH D
               </span>
               <span className="text-[10px] tracking-[0.2em] text-gray-400 font-mono font-bold uppercase">

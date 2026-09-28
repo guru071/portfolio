@@ -16,7 +16,7 @@ export default function HomeView() {
           </div>
           
           <h1 className="text-5xl sm:text-7xl font-black text-white leading-tight tracking-tight">
-            I am <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-yellow-600 drop-shadow-[0_0_25px_rgba(201,168,76,0.5)]">GURUPRASATH D</span>
+            I am <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-yellow-600 drop-shadow-[0_0_25px_rgba(201,168,76,0.5)] whitespace-nowrap">GURUPRASATH D</span>
           </h1>
           
           <p className="text-xl text-gray-400 font-light max-w-xl leading-relaxed">
