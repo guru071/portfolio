@@ -4,8 +4,8 @@ export default function Footer() {
   const profiles = [
     { name: 'GitHub', url: 'https://github.com/guru071', icon: 'github' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/guru-prasath-bb8328382', icon: 'linkedin' },
-    { name: 'Insta (Pro)', url: 'https://instagram.com/maghs.guruprasath', icon: 'instagram' },
-    { name: 'Insta (Personal)', url: 'https://instagram.com/infinity.maghs', icon: 'instagram' },
+    { name: 'Instagram', url: 'https://instagram.com/maghs.guruprasath', icon: 'instagram' },
+    { name: 'Instagram', url: 'https://instagram.com/infinity.maghs', icon: 'instagram' },
   ];
 
   return (

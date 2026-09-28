@@ -107,7 +107,7 @@ export default function ResumeView() {
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Leading the technological vision, business strategy, and product architecture for a premium software development company in India. Orchestrating Team SPARROW™ in the development of sophisticated platforms like MaghGo and TN Voting.
+              Leading the technological vision, business strategy, and product architecture for a premium software development company in India. Orchestrating Team ™SPARROW in the development of sophisticated platforms like MaghGo and TN Voting.
             </p>
           </div>
 

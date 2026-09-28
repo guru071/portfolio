@@ -60,7 +60,7 @@ export default function HomeView() {
           </div>
           <h3 className="text-2xl font-bold text-white">Founder & CEO</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Leading the vision at GOAT'ECH. Guiding Team SPARROW™ and shaping the future of our technology ecosystem.
+            Leading the vision at GOAT'ECH. Guiding Team ™SPARROW and shaping the future of our technology ecosystem.
           </p>
         </div>
         <div className="glass-card p-10 rounded-3xl border border-white/5 hover:border-amber-500/30 transition-all space-y-4">
