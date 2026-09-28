@@ -2,6 +2,28 @@ import React from 'react';
 import { Briefcase, Code, Database, Layout, Terminal } from 'lucide-react';
 
 export default function ResumeView() {
+  const coreLanguages = [
+    { name: 'Python', icon: 'python' },
+    { name: 'C', icon: 'c' },
+    { name: 'C++', icon: 'cplusplus' },
+    { name: 'Java', icon: 'openjdk' },
+    { name: 'JavaScript', icon: 'javascript' }
+  ];
+
+  const frontend = [
+    { name: 'HTML5', icon: 'html5' },
+    { name: 'CSS3', icon: 'css3' },
+    { name: 'React', icon: 'react' },
+    { name: 'Tailwind', icon: 'tailwindcss' }
+  ];
+
+  const backend = [
+    { name: 'SQL', icon: 'sqlite' },
+    { name: 'MySQL', icon: 'mysql' },
+    { name: 'PostgreSQL', icon: 'postgresql' },
+    { name: 'FastAPI', icon: 'fastapi' }
+  ];
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
       
@@ -23,9 +45,12 @@ export default function ResumeView() {
               <Terminal className="text-[#c9a84c] w-8 h-8" />
               <h4 className="text-xl font-bold text-white uppercase tracking-wider">Core Languages</h4>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {['Python', 'C', 'C++', 'Java', 'JavaScript (JS)'].map(skill => (
-                <span key={skill} className="px-3 py-1.5 bg-black border border-[#c9a84c]/30 rounded-lg text-sm font-bold text-white tracking-wider">{skill}</span>
+            <div className="flex flex-col gap-3">
+              {coreLanguages.map(skill => (
+                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
+                  <img src={`https://cdn.simpleicons.org/${skill.icon}/c9a84c`} alt={skill.name} className="w-5 h-5" />
+                  <span className="text-sm font-bold text-white tracking-wider uppercase">{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -35,9 +60,12 @@ export default function ResumeView() {
               <Layout className="text-[#c9a84c] w-8 h-8" />
               <h4 className="text-xl font-bold text-white uppercase tracking-wider">Frontend</h4>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {['HTML', 'CSS', 'React', 'Tailwind'].map(skill => (
-                <span key={skill} className="px-3 py-1.5 bg-black border border-[#c9a84c]/30 rounded-lg text-sm font-bold text-white tracking-wider">{skill}</span>
+            <div className="flex flex-col gap-3">
+              {frontend.map(skill => (
+                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
+                  <img src={`https://cdn.simpleicons.org/${skill.icon}/c9a84c`} alt={skill.name} className="w-5 h-5" />
+                  <span className="text-sm font-bold text-white tracking-wider uppercase">{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -47,9 +75,12 @@ export default function ResumeView() {
               <Database className="text-[#c9a84c] w-8 h-8" />
               <h4 className="text-xl font-bold text-white uppercase tracking-wider">Database & Backend</h4>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {['SQL', 'MySQL', 'PostgreSQL', 'FastAPI'].map(skill => (
-                <span key={skill} className="px-3 py-1.5 bg-black border border-[#c9a84c]/30 rounded-lg text-sm font-bold text-white tracking-wider">{skill}</span>
+            <div className="flex flex-col gap-3">
+              {backend.map(skill => (
+                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
+                  <img src={`https://cdn.simpleicons.org/${skill.icon}/c9a84c`} alt={skill.name} className="w-5 h-5" />
+                  <span className="text-sm font-bold text-white tracking-wider uppercase">{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Mail, MapPin, Send, Phone, MessageCircle, Github, Linkedin, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Phone, MessageCircle } from 'lucide-react';
 
 export default function ContactView() {
   const profiles = [
-    { name: 'GitHub', url: 'https://github.com/guru071', icon: <Github className="w-5 h-5"/> },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/guru-prasath-bb8328382', icon: <Linkedin className="w-5 h-5"/> },
-    { name: 'Insta (Personal)', url: 'https://instagram.com/infinity.maghs', icon: <Instagram className="w-5 h-5"/> },
-    { name: 'Insta (Professional)', url: 'https://instagram.com/maghs.guruprasath', icon: <Instagram className="w-5 h-5"/> },
-    { name: 'YouTube', url: 'https://youtube.com/@goat-u9m2v', icon: <Youtube className="w-5 h-5"/> },
-    { name: 'X / Twitter', url: 'https://x.com/goatechmaghs', icon: <Twitter className="w-5 h-5"/> },
+    { name: 'GitHub', url: 'https://github.com/guru071', icon: 'github' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/guru-prasath-bb8328382', icon: 'linkedin' },
+    { name: 'Insta (Personal)', url: 'https://instagram.com/infinity.maghs', icon: 'instagram' },
+    { name: 'Insta (Pro)', url: 'https://instagram.com/maghs.guruprasath', icon: 'instagram' },
+    { name: 'YouTube', url: 'https://youtube.com/@goat-u9m2v', icon: 'youtube' },
+    { name: 'X / Twitter', url: 'https://x.com/goatechmaghs', icon: 'x' },
   ];
 
   return (
@@ -46,8 +46,8 @@ export default function ContactView() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center text-[#25D366]">
-                    <MessageCircle className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-lg bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center">
+                    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">WhatsApp</p>
@@ -81,9 +81,9 @@ export default function ContactView() {
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Connect With Me</p>
                 <div className="grid grid-cols-2 gap-3">
                   {profiles.map((profile, i) => (
-                    <a key={i} href={profile.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 p-2 rounded-lg bg-black border border-[#c9a84c]/10 hover:border-[#c9a84c]/50 text-gray-400 hover:text-[#c9a84c] transition-all text-xs font-semibold uppercase tracking-wider">
-                      {profile.icon}
-                      <span className="truncate">{profile.name}</span>
+                    <a key={i} href={profile.url} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg bg-black border border-[#c9a84c]/10 hover:border-[#c9a84c]/50 text-gray-400 hover:text-[#c9a84c] transition-all">
+                      <img src={`https://cdn.simpleicons.org/${profile.icon}/c9a84c`} alt={profile.name} className="w-4 h-4" />
+                      <span className="truncate text-[10px] font-bold uppercase tracking-wider">{profile.name}</span>
                     </a>
                   ))}
                 </div>
