@@ -1,125 +1,76 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function SeoHead({
-  title,
-  description = "GOAT'ECH (Greatest Of All Time Technology) is an elite software development and technology startup based in India. We specialize in building cutting-edge mobile applications, high-performance web platforms, sophisticated enterprise solutions, and next-generation UI/UX designs. Partnered closely with MAGH'S Technology, our ecosystem empowers businesses with robust, scalable software, API architecture, and seamless cloud integrations. Explore our flagship products including MaghGo, TN Voting, and Smart Aqua, crafted with precision by our founders Guruprasath D, Aditya R, Abdul Kapur S, and Abishek R.",
-  canonical,
-  schema = null,
-  type = 'website',
-  image = 'https://goatech.tech/images/goatech-og-banner.png'
+export default function SeoHead({ 
+  title = "GURUPRASATH D | Founder & CEO of GOAT'ECH", 
+  description = "Official portfolio of Guruprasath D, Founder & CEO of GOAT'ECH and MAGH'S Technology. Expert Software Architect and Developer based in Tamil Nadu, India.",
+  url = "https://guruprasath.goatech.tech"
 }) {
-  const location = useLocation();
-
-  useEffect(() => {
-    const pathname = location.pathname || '/';
-    const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
-    const defaultCanonical = `https://goatech.tech${normalizedPath}`;
-    
-    let finalCanonical = defaultCanonical;
-    if (canonical) {
-      const cleanCanonical = canonical.split('?')[0].replace(/\/$/, '');
-      finalCanonical = cleanCanonical || 'https://goatech.tech/';
-    }
-
-    let fullTitle = "GOAT'ECH | Software Development & Technology Solutions | India";
-    if (title) {
-      if (title.includes("GOAT'ECH") || title.includes("Greatest Of All Time")) {
-        fullTitle = title;
-      } else {
-        fullTitle = `${title} | GOAT'ECH`;
-      }
-    }
-    document.title = fullTitle;
-
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.name = 'description';
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.content = description;
-
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.name = 'keywords';
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.content = "GOAT'ECH, Greatest Of All Time Technology, MAGH'S Technology, MaghGo, TN Voting, Smart Aqua, Nothing IDE, software development, web development, mobile apps, Android apps, enterprise software, API development, React, FastAPI, India startup, technology solutions, Guruprasath D, Aditya R, Team Sparrow, tech ecosystem";
-
-
-    const setMetaTag = (attrName, attrValue, content) => {
-      let tag = document.querySelector(`meta[${attrName}="${attrValue}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute(attrName, attrValue);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', content);
-    };
-
-    setMetaTag('property', 'og:site_name', "GOAT'ECH - Greatest Of All Time Technology");
-    setMetaTag('property', 'og:title', fullTitle);
-    setMetaTag('property', 'og:description', description);
-    setMetaTag('property', 'og:url', finalCanonical);
-    setMetaTag('property', 'og:type', type);
-    setMetaTag('property', 'og:image', image);
-    setMetaTag('property', 'og:locale', 'en_US');
-
-    setMetaTag('name', 'twitter:card', 'summary_large_image');
-    setMetaTag('name', 'twitter:site', '@goatech');
-    setMetaTag('name', 'twitter:creator', '@guruprasath');
-    setMetaTag('name', 'twitter:title', fullTitle);
-    setMetaTag('name', 'twitter:description', description);
-    setMetaTag('name', 'twitter:image', image);
-
-    let linkCanonical = document.querySelector('link[rel="canonical"]');
-    if (!linkCanonical) {
-      linkCanonical = document.createElement('link');
-      linkCanonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(linkCanonical);
-    }
-    linkCanonical.setAttribute('href', finalCanonical);
-
-    let scriptTag = document.getElementById('json-ld-seo');
-    if (!scriptTag) {
-      scriptTag = document.createElement('script');
-      scriptTag.id = 'json-ld-seo';
-      scriptTag.type = 'application/ld+json';
-      document.head.appendChild(scriptTag);
-    }
-
-    const defaultOrganizationSchema = {
-      "@context": "https://schema.org",
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Guruprasath D",
+    "jobTitle": "Founder and CEO",
+    "worksFor": {
       "@type": "Organization",
-      "@id": "https://goatech.tech/#organization",
-      "name": "GOAT'ECH",
-      "legalName": "Greatest Of All Time Technology",
-      "alternateName": ["GOAT Technology", "Greatest Of All Time Technology"],
-      "url": "https://goatech.tech/",
-      "logo": {"@type": "ImageObject", "url": "https://goatech.tech/images/goatech-logo.jpeg"},
-      "description": "GOAT'ECH is a technology startup in India building software and technology solutions.",
-      "founder": [{"@id": "https://goatech.tech/team/guruprasath-d#person"}, {"@id": "https://goatech.tech/team/aditya-r#person"}, {"@id": "https://goatech.tech/team/abdul-kapur-s#person"}, {"@id": "https://goatech.tech/team/abishek-r#person"}],
-      "brand": {"@type": "Brand", "name": "GOAT'ECH", "url": "https://goatech.tech/"}
-    };
-
-    let schemaContent;
-    if (schema) {
-      if (Array.isArray(schema)) {
-        schemaContent = {
-          "@context": "https://schema.org",
-          "@graph": schema
-        };
-      } else {
-        schemaContent = schema;
+      "name": "GOAT'ECH"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Mailam Engineering College"
+      },
+      {
+        "@type": "HighSchool",
+        "name": "Bonne Nehru Hr Sec School"
       }
-    } else {
-      schemaContent = defaultOrganizationSchema;
+    ],
+    "url": url,
+    "sameAs": [
+      "https://github.com/guru071",
+      "https://www.linkedin.com/in/guru-prasath-bb8328382",
+      "https://instagram.com/maghs.guruprasath",
+      "https://youtube.com/@goat-u9m2v",
+      "https://x.com/goatechmaghs"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
     }
+  };
 
-    scriptTag.textContent = JSON.stringify(schemaContent, null, 2);
-  }, [location.pathname, title, description, canonical, schema, type, image]);
+  return (
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content="Guruprasath D, Guruprasath GOAT'ECH, Guruprasath MAGHS, CEO of GOAT'ECH, Mailam Engineering College Alumni, Software Developer Tamil Nadu, React Developer India, Python Developer Tamil Nadu, Guruprasath portfolio, Tech Founder India" />
+      <meta name="author" content="Guruprasath D" />
+      
+      {/* Geo-Targeting to dominate local search */}
+      <meta name="geo.region" content="IN-TN" />
+      <meta name="geo.placename" content="Tamil Nadu" />
 
-  return null;
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="profile" />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={`${url}/images/team/guruprasath-d.jpg`} />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={`${url}/images/team/guruprasath-d.jpg`} />
+
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(personSchema)}
+      </script>
+    </Helmet>
+  );
 }

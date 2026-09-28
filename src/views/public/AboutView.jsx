@@ -1,5 +1,6 @@
+import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
-import { BookOpen, MapPin, Award, Rocket } from 'lucide-react';
+import { BookOpen, MapPin, Award, Rocket, GraduationCap } from 'lucide-react';
 
 export default function AboutView() {
   return (
@@ -7,7 +8,7 @@ export default function AboutView() {
       
       <div className="text-center space-y-4">
         <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase">About <span className="text-[#c9a84c]">Me</span></h1>
-        <p className="text-gray-400 font-medium text-lg">My journey, passion, and the drive to build the future.</p>
+        <p className="text-gray-400 font-medium text-lg">My journey, education, and the drive to build the future.</p>
       </div>
 
       <div className="glass-card p-10 space-y-8">
@@ -39,6 +40,22 @@ export default function AboutView() {
 
         <div className="space-y-6 pt-8 border-t border-white/10">
           <h3 className="text-xl font-bold text-white uppercase tracking-wider flex items-center gap-2">
+            <GraduationCap className="text-[#c9a84c] w-6 h-6" /> Education
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://www.mailamengg.com/" target="_blank" rel="noreferrer" className="block p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+              <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-1">College</h4>
+              <p className="text-lg font-bold text-white group-hover:text-[#c9a84c] transition-colors">MAILAM ENGINEERING COLLEGE</p>
+            </a>
+            <a href="http://www.bonnenehruschool.com/" target="_blank" rel="noreferrer" className="block p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+              <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-1">School</h4>
+              <p className="text-lg font-bold text-white group-hover:text-[#c9a84c] transition-colors">BONNE NEHRU HR SEC SCHOOL</p>
+            </a>
+          </div>
+        </div>
+
+        <div className="space-y-6 pt-8 border-t border-white/10">
+          <h3 className="text-xl font-bold text-white uppercase tracking-wider flex items-center gap-2">
             <Award className="text-[#c9a84c] w-6 h-6" /> Philosophy
           </h3>
           <p className="text-gray-400 leading-relaxed">
@@ -48,4 +65,5 @@ export default function AboutView() {
       </div>
     </div>
   );
+    </>
 }

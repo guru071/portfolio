@@ -1,3 +1,4 @@
+import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
 import { Mail, MapPin, Send, Phone, MessageCircle } from 'lucide-react';
 
@@ -5,7 +6,7 @@ export default function ContactView() {
   const profiles = [
     { name: 'GitHub', url: 'https://github.com/guru071', icon: 'github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/guru-prasath-bb8328382', icon: 'linkedin' },
-    { name: 'Instagram', url: 'https://instagram.com/infinity.maghs', icon: 'instagram' },
+    { name: 'Instagram', url: 'https://instagram.com/infinity.sparrow', icon: 'instagram' },
     { name: 'Instagram', url: 'https://instagram.com/maghs.guruprasath', icon: 'instagram' },
     { name: 'YouTube', url: 'https://youtube.com/@goat-u9m2v', icon: 'youtube' },
     { name: 'X', url: 'https://x.com/goatechmaghs', icon: 'x' },
@@ -128,4 +129,5 @@ export default function ContactView() {
       </div>
     </div>
   );
+    </>
 }

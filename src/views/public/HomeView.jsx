@@ -1,3 +1,4 @@
+import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
 import { ArrowRight, Code2, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -74,4 +75,5 @@ export default function HomeView() {
 
     </div>
   );
+    </>
 }

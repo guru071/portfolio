@@ -1,3 +1,4 @@
+import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
 import { Briefcase, Code, Database, Layout, Terminal } from 'lucide-react';
 
@@ -131,4 +132,5 @@ export default function ResumeView() {
 
     </div>
   );
+    </>
 }

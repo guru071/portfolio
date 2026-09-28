@@ -6,6 +6,7 @@ import HomeView from './views/public/HomeView';
 import AboutView from './views/public/AboutView';
 import ResumeView from './views/public/ResumeView';
 import ProjectsView from './views/public/ProjectsView';
+import BlogView from "./views/public/BlogView";
 import ContactView from './views/public/ContactView';
 import GoatBackground from './components/effects/GoatBackground';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<AboutView />} />
           <Route path="/resume" element={<ResumeView />} />
           <Route path="/projects" element={<ProjectsView />} />
+          <Route path="/blog" element={<BlogView />} />
           <Route path="/contact" element={<ContactView />} />
         </Routes>
       </main>
