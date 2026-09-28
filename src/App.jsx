@@ -7,10 +7,12 @@ import AboutView from './views/public/AboutView';
 import ResumeView from './views/public/ResumeView';
 import ProjectsView from './views/public/ProjectsView';
 import ContactView from './views/public/ContactView';
+import GoatBackground from './components/effects/GoatBackground';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col font-sans selection:bg-amber-500/30">
+    <div className="min-h-screen bg-black text-white flex flex-col font-sans selection:bg-[#c9a84c]/30">
+      <GoatBackground />
       <Navbar />
       <main className="flex-grow relative z-10 w-full overflow-x-hidden pt-24 pb-20">
         <Routes>
