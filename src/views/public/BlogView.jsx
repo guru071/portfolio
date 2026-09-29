@@ -1,5 +1,6 @@
 import React from 'react';
 import SeoHead from '../../components/common/SeoHead';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Calendar, Tag } from 'lucide-react';
 
 export default function BlogView() {
@@ -22,10 +23,34 @@ export default function BlogView() {
 
   return (
     <>
+
       <SeoHead 
-        title="Blog & Articles | GURUPRASATH D" 
-        description="Read the latest articles, tutorials, and architectural deep-dives from Guruprasath D, Founder & CEO of GOAT'ECH." 
+        title="Blog & Articles | GURUPRASATH D | Founder of GOAT'ECH" 
+        description="Read the latest articles, tutorials, and architectural deep-dives from Guruprasath D, Founder & CEO of GOAT'ECH. Topics include MaghGo, Nothing IDE, and Tech Leadership." 
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "url": "https://guruprasath.goatech.tech/blog",
+            "name": "Guruprasath D's Tech Blog",
+            "description": "Tech articles and vision from the Founder and CEO of GOAT'ECH and MAGH'S Technology.",
+            "author": {
+              "@id": "https://guruprasath.goatech.tech/#person"
+            },
+            "blogPost": posts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "author": {
+                "@id": "https://guruprasath.goatech.tech/#person"
+              },
+              "datePublished": post.date
+            }))
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
         
         <div className="text-center space-y-4">
