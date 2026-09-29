@@ -36,7 +36,7 @@ export default function AboutView() {
             I have always been driven by an immense curiosity to understand how technology shapes our world. From my early days experimenting with code to founding my own tech ventures, my focus has remained constant: solving complex problems with clean, efficient architecture.
           </p>
           <p className="text-gray-400 leading-relaxed">
-            In October 2024, I founded MAGH'S Technology, laying the foundation for what would eventually evolve into the GOAT'ECH ecosystem. Leading Team ™SPARROW and collaborating with brilliant minds, I architect products like MaghGo and TN Voting that stand the test of time.
+            On October 6, 2024 (6/10/2024), I founded MAGH'S Technology. While MAGH'S Technology and GOAT'ECH are two distinct names, they form one unified, powerful ecosystem. Leading Team ™SPARROW and collaborating with brilliant minds, I architect products like MaghGo and TN Voting that stand the test of time.
           </p>
         </div>
 

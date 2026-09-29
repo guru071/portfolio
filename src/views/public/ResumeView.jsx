@@ -130,7 +130,7 @@ export default function ResumeView() {
                 <p className="text-lg text-gray-400 font-bold tracking-widest uppercase mt-1">MAGH'S Technology</p>
               </div>
               <div className="text-gray-400 font-bold text-sm mt-2 sm:mt-0 bg-white/5 px-4 py-2 rounded-lg border border-white/10 tracking-widest uppercase">
-                OCT 2024 - PRESENT
+                OCT 6, 2024 - PRESENT
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
