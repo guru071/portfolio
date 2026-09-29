@@ -36,7 +36,7 @@ export default function AboutView() {
             I have always been driven by an immense curiosity to understand how technology shapes our world. From my early days experimenting with code to founding my own tech ventures, my focus has remained constant: solving complex problems with clean, efficient architecture.
           </p>
           <p className="text-gray-400 leading-relaxed">
-            On October 6, 2024 (6/10/2024), I founded MAGH'S Technology. GOAT'ECH and MAGH'S Technology are exactly the same company—just two names representing my core group and unified ecosystem. Leading Team ™SPARROW and collaborating with brilliant minds, I architect products like MaghGo and TN Voting that stand the test of time.
+            On October 6, 2024 (6/10/2024), I founded MAGH'S Technology. GOAT'ECH and MAGH'S Technology are the exact same company. However, they operate under my overarching parent group known simply as MAGH'S, which was founded on October 6, 2024 (6/10/2024). Leading Team ™SPARROW and collaborating with brilliant minds, I architect products like MaghGo and TN Voting that stand the test of time.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function AboutView() {
               <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-1">College</h4>
               <p className="text-lg font-bold text-white group-hover:text-[#c9a84c] transition-colors">MAILAM ENGINEERING COLLEGE</p>
             </a>
-            <a href="http://www.bonnenehruschool.com/" target="_blank" rel="noreferrer" className="block p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
+            <a href="https://bonnenehru.edu.in/" target="_blank" rel="noreferrer" className="block p-6 rounded-2xl bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 hover:bg-white/5 transition-all group">
               <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-1">School</h4>
               <p className="text-lg font-bold text-white group-hover:text-[#c9a84c] transition-colors">BONNE NEHRU HR SEC SCHOOL</p>
             </a>
