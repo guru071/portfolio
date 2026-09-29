@@ -1,11 +1,12 @@
 import React from 'react';
+import { Github, Linkedin, Instagram, Youtube, Twitter } from 'lucide-react';
 
 export default function Footer() {
   const profiles = [
-    { name: 'GitHub', url: 'https://github.com/guru071', icon: 'github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/guru-prasath-bb8328382', icon: 'linkedin' },
-    { name: 'Instagram', url: 'https://instagram.com/maghs.guruprasath', icon: 'instagram' },
-    { name: 'Instagram', url: 'https://instagram.com/infinity.sparrow', icon: 'instagram' },
+    { name: 'GitHub', url: 'https://github.com/guru071', icon: Github },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/guru-prasath-bb8328382', icon: Linkedin },
+    { name: 'Instagram', url: 'https://instagram.com/maghs.guruprasath', icon: Instagram },
+    { name: 'Instagram', url: 'https://instagram.com/infinity.sparrow', icon: Instagram },
   ];
 
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-6">
           {profiles.map(p => (
              <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#c9a84c] uppercase tracking-widest transition-colors">
-               <img src={`https://cdn.simpleicons.org/${p.icon}/888888`} alt={p.name} className="w-4 h-4" />
+               <p.icon className="w-4 h-4" />
                {p.name}
              </a>
           ))}
