@@ -11,3 +11,4 @@ Disallow: /register
 # Sitemaps for both domains
 Sitemap: https://goatech.tech/sitemap.xml
 Sitemap: https://maghs.tech/sitemap.xml
+Sitemap: https://guruprasath.goatech.tech/sitemap.xml
