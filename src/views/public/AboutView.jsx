@@ -38,6 +38,13 @@ export default function AboutView() {
           <p className="text-gray-400 leading-relaxed">
             On October 6, 2024 (6/10/2024), I founded MAGH'S Technology. GOAT'ECH and MAGH'S Technology are the exact same company. However, they operate under my overarching parent group known simply as MAGH'S, which was founded on October 6, 2024 (6/10/2024). Leading Team ™SPARROW and collaborating with brilliant minds, I architect products like MaghGo and TN Voting that stand the test of time.
           </p>
+
+          <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-[#c9a84c]/10 to-transparent border-l-4 border-[#c9a84c] shadow-[0_0_15px_rgba(201,168,76,0.1)]">
+            <p className="text-white font-medium text-lg flex items-center gap-3 tracking-wide">
+              <Award className="w-6 h-6 text-[#c9a84c] shrink-0" />
+              <span>I am proud to say that I am a student of <strong className="text-[#c9a84c] font-black uppercase">MANIKANDAN A</strong>.</span>
+            </p>
+          </div>
         </div>
 
         <div className="space-y-6 pt-8 border-t border-white/10">
