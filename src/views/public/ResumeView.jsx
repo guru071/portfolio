@@ -31,13 +31,13 @@ export default function ResumeView() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
       
       <div className="text-center space-y-4">
-        <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase">Skills & <span className="text-[#c9a84c]">Experience</span></h1>
-        <p className="text-gray-400 font-medium text-lg">My technical arsenal and professional journey as a founder.</p>
+        <h1 className="text-4xl sm:text-6xl font-black text-on-surface tracking-tight uppercase">Skills & <span className="text-[#c9a84c]">Experience</span></h1>
+        <p className="text-on-surface-variant font-medium text-lg">My technical arsenal and professional journey as a founder.</p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-        <a href="/guruprasath-d-resume.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-white/5 border border-white/10 hover:bg-amber-500/10 hover:border-amber-500/30 transition-all uppercase tracking-widest text-sm w-full sm:w-auto justify-center">
+        <a href="/guruprasath-d-resume.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-on-surface bg-surface-container-high border border-surface-variant hover:bg-primary-container hover:border-surface-variant transition-all uppercase tracking-widest text-sm w-full sm:w-auto justify-center">
           <FileText className="w-5 h-5" /> View Resume
         </a>
-        <a href="/guruprasath-d-resume.pdf" download="Guruprasath_D_Resume.pdf" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all uppercase tracking-widest text-sm w-full sm:w-auto justify-center">
+        <a href="/guruprasath-d-resume.pdf" download="Guruprasath_D_Resume.pdf" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-on-surface bg-primary text-on-primary hover:opacity-90  shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all uppercase tracking-widest text-sm w-full sm:w-auto justify-center">
           <Download className="w-5 h-5" /> Download PDF
         </a>
       </div>
@@ -45,52 +45,52 @@ export default function ResumeView() {
 
       {/* Skills Matrix */}
       <div className="space-y-8">
-        <div className="flex items-center gap-4 border-b border-white/10 pb-4">
+        <div className="flex items-center gap-4 border-b border-surface-variant pb-4">
           <Code className="w-8 h-8 text-[#c9a84c]" />
-          <h2 className="text-3xl font-bold text-white">Technical Arsenal</h2>
+          <h2 className="text-3xl font-bold text-on-surface">Technical Arsenal</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="glass-card p-8 rounded-2xl">
+          <div className="bg-surface-container-lowest border border-surface-variant shadow-sm p-8 rounded-2xl">
             <div className="flex items-center gap-3 mb-6">
               <Terminal className="text-[#c9a84c] w-8 h-8" />
-              <h4 className="text-xl font-bold text-white uppercase tracking-wider">Core Languages</h4>
+              <h4 className="text-xl font-bold text-on-surface uppercase tracking-wider">Core Languages</h4>
             </div>
             <div className="flex flex-col gap-3">
               {coreLanguages.map(skill => (
-                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
+                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-background border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
                   <img src={`https://cdn.simpleicons.org/${skill.icon}/c9a84c`} alt={skill.name} className="w-5 h-5" />
-                  <span className="text-sm font-bold text-white tracking-wider uppercase">{skill.name}</span>
+                  <span className="text-sm font-bold text-on-surface tracking-wider uppercase">{skill.name}</span>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="glass-card p-8 rounded-2xl">
+          <div className="bg-surface-container-lowest border border-surface-variant shadow-sm p-8 rounded-2xl">
             <div className="flex items-center gap-3 mb-6">
               <Layout className="text-[#c9a84c] w-8 h-8" />
-              <h4 className="text-xl font-bold text-white uppercase tracking-wider">Frontend</h4>
+              <h4 className="text-xl font-bold text-on-surface uppercase tracking-wider">Frontend</h4>
             </div>
             <div className="flex flex-col gap-3">
               {frontend.map(skill => (
-                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
+                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-background border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
                   <img src={`https://cdn.simpleicons.org/${skill.icon}/c9a84c`} alt={skill.name} className="w-5 h-5" />
-                  <span className="text-sm font-bold text-white tracking-wider uppercase">{skill.name}</span>
+                  <span className="text-sm font-bold text-on-surface tracking-wider uppercase">{skill.name}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="glass-card p-8 rounded-2xl">
+          <div className="bg-surface-container-lowest border border-surface-variant shadow-sm p-8 rounded-2xl">
             <div className="flex items-center gap-3 mb-6">
               <Database className="text-[#c9a84c] w-8 h-8" />
-              <h4 className="text-xl font-bold text-white uppercase tracking-wider">Database & Backend</h4>
+              <h4 className="text-xl font-bold text-on-surface uppercase tracking-wider">Database & Backend</h4>
             </div>
             <div className="flex flex-col gap-3">
               {backend.map(skill => (
-                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-black border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
+                <div key={skill.name} className="flex items-center gap-3 px-4 py-3 bg-background border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors rounded-xl">
                   <img src={`https://cdn.simpleicons.org/${skill.icon}/c9a84c`} alt={skill.name} className="w-5 h-5" />
-                  <span className="text-sm font-bold text-white tracking-wider uppercase">{skill.name}</span>
+                  <span className="text-sm font-bold text-on-surface tracking-wider uppercase">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -100,40 +100,40 @@ export default function ResumeView() {
 
       {/* Experience */}
       <div className="space-y-8">
-        <div className="flex items-center gap-4 border-b border-white/10 pb-4">
+        <div className="flex items-center gap-4 border-b border-surface-variant pb-4">
           <Briefcase className="w-8 h-8 text-[#c9a84c]" />
-          <h2 className="text-3xl font-bold text-white">Experience</h2>
+          <h2 className="text-3xl font-bold text-on-surface">Experience</h2>
         </div>
 
         <div className="space-y-6">
-          <div className="glass-card p-10 relative overflow-hidden group">
+          <div className="bg-surface-container-lowest border border-surface-variant shadow-sm p-10 relative overflow-hidden group">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#c9a84c]"></div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-[#c9a84c] transition-colors uppercase tracking-wider">Founder & CEO</h3>
-                <p className="text-lg text-gray-400 font-bold tracking-widest uppercase mt-1">GOAT'ECH</p>
+                <h3 className="text-2xl font-bold text-on-surface group-hover:text-[#c9a84c] transition-colors uppercase tracking-wider">Founder & CEO</h3>
+                <p className="text-lg text-on-surface-variant font-bold tracking-widest uppercase mt-1">GOAT'ECH</p>
               </div>
               <div className="text-[#c9a84c] font-bold text-sm mt-2 sm:mt-0 bg-[#c9a84c]/10 px-4 py-2 rounded-lg border border-[#c9a84c]/20 tracking-widest uppercase">
                 FEB 2026 - PRESENT
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-on-surface-variant leading-relaxed">
               Leading the technological vision, business strategy, and product architecture for a premium software development company in India. Orchestrating Team ™SPARROW in the development of sophisticated platforms like MaghGo and TN Voting.
             </p>
           </div>
 
-          <div className="glass-card p-10 relative overflow-hidden group">
+          <div className="bg-surface-container-lowest border border-surface-variant shadow-sm p-10 relative overflow-hidden group">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-500"></div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors uppercase tracking-wider">Founder</h3>
-                <p className="text-lg text-gray-400 font-bold tracking-widest uppercase mt-1">MAGH'S Technology</p>
+                <h3 className="text-2xl font-bold text-on-surface group-hover:text-on-surface-variant transition-colors uppercase tracking-wider">Founder</h3>
+                <p className="text-lg text-on-surface-variant font-bold tracking-widest uppercase mt-1">MAGH'S Technology</p>
               </div>
-              <div className="text-gray-400 font-bold text-sm mt-2 sm:mt-0 bg-white/5 px-4 py-2 rounded-lg border border-white/10 tracking-widest uppercase">
+              <div className="text-on-surface-variant font-bold text-sm mt-2 sm:mt-0 bg-surface-container-high px-4 py-2 rounded-lg border border-surface-variant tracking-widest uppercase">
                 OCT 6, 2024 - PRESENT
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-on-surface-variant leading-relaxed">
               Founded the MAGH'S technology ecosystem. Developed initial infrastructure and established a core engineering culture that evolved into GOAT'ECH.
             </p>
           </div>

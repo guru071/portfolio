@@ -44,36 +44,36 @@ export default function ProjectsView() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
       
       <div className="text-center space-y-4">
-        <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase">Featured <span className="text-[#c9a84c]">Projects</span></h1>
-        <p className="text-gray-400 font-light text-lg">Products and open-source software I've built and architected.</p>
+        <h1 className="text-4xl sm:text-6xl font-black text-on-surface tracking-tight uppercase">Featured <span className="text-[#c9a84c]">Projects</span></h1>
+        <p className="text-on-surface-variant font-light text-lg">Products and open-source software I've built and architected.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, i) => (
-          <div key={i} className="glass-card p-10 rounded-[2rem] border border-white/5 hover:border-[#c9a84c]/40 hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] transition-all group flex flex-col justify-between space-y-6">
+          <div key={i} className="bg-surface-container-lowest border border-surface-variant shadow-sm p-10 rounded-[2rem] border border-surface-variant hover:border-[#c9a84c]/40 hover:shadow-lg transition-all group flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 {project.logo ? (
-                  <img src={project.logo} alt={project.title} className="w-12 h-12 object-contain rounded-xl border border-white/10 group-hover:border-[#c9a84c]/50 transition-all" />
+                  <img src={project.logo} alt={project.title} className="w-12 h-12 object-contain rounded-xl border border-surface-variant group-hover:border-[#c9a84c]/50 transition-all" />
                 ) : (
                   <TerminalSquare className="w-10 h-10 text-[#c9a84c]/50 group-hover:text-[#c9a84c] transition-colors" />
                 )}
                 <div className="flex gap-2">
                   {project.tech.map((t, index) => (
-                    <span key={index} className="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] font-mono text-gray-400 uppercase tracking-wider">
+                    <span key={index} className="px-2 py-1 bg-surface-container-high border border-surface-variant rounded-md text-[10px] font-mono text-on-surface-variant uppercase tracking-wider">
                       {t}
                     </span>
                   ))}
                 </div>
               </div>
-              <h3 className="text-3xl font-bold text-white group-hover:text-[#c9a84c] transition-colors mt-2">{project.title}</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-3xl font-bold text-on-surface group-hover:text-[#c9a84c] transition-colors mt-2">{project.title}</h3>
+              <p className="text-on-surface-variant leading-relaxed">
                 {project.description}
               </p>
             </div>
             
-            <div className="pt-6 border-t border-white/10">
-              <a href={project.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#c9a84c] hover:text-amber-400 font-bold uppercase tracking-widest text-sm transition-colors">
+            <div className="pt-6 border-t border-surface-variant">
+              <a href={project.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#c9a84c] hover:text-primary font-bold uppercase tracking-widest text-sm transition-colors">
                 {project.isGithub ? <><Github className="w-5 h-5"/> View Source</> : <><ExternalLink className="w-5 h-5"/> Launch Project</>}
               </a>
             </div>
