@@ -1,8 +1,9 @@
 {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/about", "destination": "/__seo/about.html" },
+    { "source": "/resume", "destination": "/__seo/resume.html" },
+    { "source": "/projects", "destination": "/__seo/projects.html" },
+    { "source": "/blog", "destination": "/__seo/blog.html" },
+    { "source": "/contact", "destination": "/__seo/contact.html" }
   ]
 }

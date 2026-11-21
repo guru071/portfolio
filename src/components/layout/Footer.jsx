@@ -1,40 +1,6 @@
 import React from 'react';
-import { Github, Linkedin, Instagram, Youtube, Twitter } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
+import { profiles, COMPANY_URL } from '../../data/portfolio.js';
 export default function Footer() {
-  const profiles = [
-    { name: 'GitHub', url: 'https://github.com/guru071', icon: Github },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/guru-prasath-bb8328382', icon: Linkedin },
-    { name: 'Instagram', url: 'https://instagram.com/maghs.guruprasath', icon: Instagram },
-    { name: 'Instagram', url: 'https://instagram.com/infinity.sparrow', icon: Instagram },
-  ];
-
-  return (
-    <footer className="bg-[#111111] border-t border-[#c9a84c]/10 py-12 relative z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        
-        <div className="flex items-center justify-center gap-4">
-          <img src="/images/goatech-logo.jpeg" alt="GOAT'ECH" className="w-12 h-12 object-contain rounded-xl border border-[#c9a84c]/20" />
-          <div className="text-left">
-            <h4 className="text-xl font-black text-white uppercase tracking-widest whitespace-nowrap">GURUPRASATH D</h4>
-            <p className="text-[#c9a84c] font-mono text-[10px] tracking-widest uppercase">Founder & CEO</p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          {profiles.map(p => (
-             <a key={p.url} href={p.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#c9a84c] uppercase tracking-widest transition-colors">
-               <p.icon className="w-4 h-4" />
-               {p.name}
-             </a>
-          ))}
-          <a href="mailto:technology@goatech.tech" className="text-sm font-bold text-gray-400 hover:text-[#c9a84c] uppercase tracking-widest transition-colors">Email</a>
-        </div>
-
-        <div className="pt-8 border-t border-[#c9a84c]/10 text-gray-500 text-xs font-mono tracking-widest">
-          &copy; {new Date().getFullYear()} GURUPRASATH D. ALL RIGHTS RESERVED. <br/> BUILT WITH GOAT'ECH DESIGN SYSTEM.
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="site-footer"><div className="wrap footer-grid"><div><p className="eyebrow">GURUPRASATH D</p><p>Co-founder &amp; CEO of GOAT’ECH.<br/>Based in Villupuram, Tamil Nadu, India.</p></div><nav aria-label="Footer navigation"><Link to="/about">About</Link><Link to="/projects">Projects</Link><Link to="/resume">Skills &amp; resume</Link><Link to="/contact">Contact</Link></nav><div className="footer-links">{profiles.map(profile => <a key={profile.href} href={profile.href} target="_blank" rel="noopener noreferrer">{profile.label} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>)}<a href={COMPANY_URL}>GOAT’ECH ↗</a></div></div><div className="wrap footer-bottom">© {new Date().getFullYear()} Guruprasath D</div></footer>;
 }

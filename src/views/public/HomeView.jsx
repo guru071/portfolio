@@ -1,81 +1,13 @@
-import SeoHead from "../../components/common/SeoHead";
 import React from 'react';
-import { ArrowRight, Code2, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
+import { projects } from '../../data/portfolio.js';
 
 export default function HomeView() {
-  return (
-    <>
-      <SeoHead title="GURUPRASATH D | Founder & CEO of GOAT'ECH" />
-    <div className="space-y-32 py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      {/* Hero Section */}
-      <div className="relative glass-card rounded-[2rem] border border-amber-500/20 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-black to-black z-0"></div>
-        
-        <div className="relative z-10 p-6 sm:p-10 md:p-20 space-y-6 flex-1">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-[0.2em] font-bold shadow-[0_0_15px_rgba(201,168,76,0.3)]">
-            Full Stack Developer | Architect
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight tracking-tight">
-            I am <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-yellow-600 drop-shadow-[0_0_25px_rgba(201,168,76,0.5)] whitespace-nowrap">GURUPRASATH D</span>
-          </h1>
-          
-          <p className="text-xl text-gray-400 font-light max-w-xl leading-relaxed">
-            Founder and CEO of GOAT'ECH and MAGH'S. I build clean, functional, and impactful software solutions that push boundaries.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <Link to="/projects" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all uppercase tracking-widest text-sm group">
-              View My Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <a href="https://github.com/guru071" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-white/5 border border-white/10 hover:bg-amber-500/10 hover:border-amber-500/30 transition-all uppercase tracking-widest text-sm">
-              <Terminal className="w-4 h-4" /> GitHub
-            </a>
-          </div>
-        </div>
-
-        {/* Hero Image */}
-        <div className="relative z-10 w-full md:w-2/5 h-72 sm:h-96 md:h-auto self-stretch bg-black border-t md:border-t-0 md:border-l border-amber-500/20">
-           <img 
-              src="/images/team/guruprasath-d1.jpeg" 
-              alt="Guruprasath D" 
-              className="w-full h-full object-cover object-[center_25%]"
-              onError={(e) => { e.target.style.display='none'; }}
-           />
-           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
-        </div>
-      </div>
-
-      {/* Quick Stats / Bio */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="glass-card p-10 rounded-3xl border border-white/5 hover:border-amber-500/30 transition-all space-y-4">
-          <Code2 className="w-10 h-10 text-amber-500" />
-          <h3 className="text-2xl font-bold text-white">Full Stack Engineering</h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Expertise in React, Python, PostgreSQL, and modern cloud architecture. I build scalable products from the ground up.
-          </p>
-        </div>
-        <div className="glass-card p-10 rounded-3xl border border-white/5 hover:border-amber-500/30 transition-all space-y-4">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center border border-amber-500/30">
-            <span className="text-amber-400 font-bold">G</span>
-          </div>
-          <h3 className="text-2xl font-bold text-white">Founder & CEO</h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Leading the vision at GOAT'ECH. Guiding Team ™SPARROW and shaping the future of our technology ecosystem.
-          </p>
-        </div>
-        <div className="glass-card p-10 rounded-3xl border border-white/5 hover:border-amber-500/30 transition-all space-y-4">
-          <Terminal className="w-10 h-10 text-amber-500" />
-          <h3 className="text-2xl font-bold text-white">Open Source</h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Creator of Nothing IDE and advocate for community-driven software development.
-          </p>
-        </div>
-      </div>
-
-    </div>
-    </>
-  );
+  return <>
+    <section className="wrap hero"><div className="hero-copy"><p className="eyebrow"><span className="dot" /> DEVELOPER · CO-FOUNDER · CEO</p><h1>Ideas into<br/><em>real things.</em></h1><p className="hero-intro">I’m <strong>Guruprasath D</strong>, co-founder and CEO of GOAT’ECH. I work on software, digital products and ideas built to be useful.</p><div className="actions"><Link className="button" to="/projects">Explore projects <ArrowUpRight size={18}/></Link><Link className="text-link" to="/about">More about me <span>↗</span></Link></div><p className="hero-location">VILLUPURAM, TAMIL NADU, INDIA <ArrowDownRight size={17}/></p></div><div className="hero-portrait"><img src="/images/team/guruprasath-d.jpg" alt="Guruprasath D, co-founder and CEO of GOAT’ECH" width="720" height="1280"/><div className="portrait-caption"><span>GURUPRASATH D</span><span>01 / PROFILE</span></div></div></section>
+    <section className="wrap section"><div className="section-heading"><div><p className="eyebrow">SELECTED WORK / 01</p><h2>Projects with<br/><em>a purpose.</em></h2></div><Link className="text-link" to="/projects">All projects ↗</Link></div><div className="project-grid">{projects.slice(0,3).map((project, index) => <a className="project-card" key={project.name} href={project.href}><div className="card-top"><span>0{index+1} / {project.category}</span><ArrowUpRight size={20}/></div>{project.image && <div className="project-image"><img src={project.image} alt="" loading="lazy"/></div>}<div><span className="status">{project.status}</span><h3>{project.name}</h3><p>{project.description}</p></div></a>)}</div></section>
+    <section className="wrap section split-banner"><div><p className="eyebrow">THE WORK BEHIND THE WORK / 02</p><h2>Curious by nature.<br/><em>Builder by practice.</em></h2></div><div><p>From programming and web development to backend systems, I enjoy learning how ideas become working software.</p><Link className="text-link" to="/resume">Explore my skills ↗</Link></div></section>
+    <section className="wrap section"><div className="cta"><p className="eyebrow">LET’S CONNECT</p><h2>Have an idea<br/><em>worth building?</em></h2><Link className="button" to="/contact">Get in touch <ArrowUpRight size={18}/></Link></div></section>
+  </>;
 }

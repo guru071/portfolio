@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local configuration and server-rendered build output
+.env
+.env.*
+!.env.example
+.ssr/
