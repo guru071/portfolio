@@ -16,8 +16,8 @@ export const skillGroups = [
 export const projects = [
   { name: 'Watercan Service', category: 'GOAT’ECH product', status: 'Developed', description: 'A water-delivery platform for suppliers, delivery teams and customers, developed by GOAT’ECH.', href: `${COMPANY_URL}/work/watercan-service`, linkLabel: 'Explore product', image: '/images/projects/watercan-service.png' },
   { name: 'MAGHGO', category: 'Personal project', status: 'Under development', description: 'My project under development. Explore its website for current information.', href: 'https://maghgo.goatech.tech', linkLabel: 'Visit project', image: '/images/projects/maghgo-logo.jpg' },
-  { name: 'HIFI', category: 'Project' },
-  { name: 'CRIETRACK', category: 'Project' },
+  { name: 'HIFI', category: 'GOAT’ECH project', description: 'A website for HIFI Custom Printing, a personalized apparel business.', href: 'https://hificustom.goatech.tech', linkLabel: 'Visit website' },
+  { name: 'CRIETRACK', category: 'GOAT’ECH project', description: 'A cross-platform records management project for law enforcement.', href: 'https://github.com/guru071/crimetrack', linkLabel: 'View repository' },
 ];
 export const pages = [
   { path: '/', title: 'Guruprasath D | Co-founder & CEO of GOAT’ECH', description: 'Meet Guruprasath D, co-founder and CEO of GOAT’ECH, and explore his software projects and skills.' },
