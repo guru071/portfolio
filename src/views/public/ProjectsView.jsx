@@ -1,4 +1,7 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { projects } from '../../data/portfolio.js';
-export default function ProjectsView(){return <><section className="wrap page-intro"><p className="eyebrow">PROJECTS / 01</p><h1>Ideas made<br/><em>tangible.</em></h1><p>A selection of company products, personal projects and code repositories. Each project is marked with its current status.</p></section><section className="wrap section project-grid projects-page">{projects.map((project,i)=><a className="project-card" key={project.name} href={project.href}><div className="card-top"><span>0{i+1} / {project.category}</span><ArrowUpRight size={20}/></div>{project.image ? <div className="project-image"><img src={project.image} alt="" loading="lazy"/></div> : <div className="code-art" aria-hidden="true">{i===3?'01':'{ }'}</div>}<div><span className="status">{project.status}</span><h2>{project.name}</h2><p>{project.description}</p><span className="project-link">{project.linkLabel} ↗</span></div></a>)}</section></>}
+import ProjectCard from '../../components/common/ProjectCard.jsx';
+
+export default function ProjectsView() {
+  return <><section className="wrap page-intro"><p className="eyebrow">PROJECTS / 01</p><h1>Ideas made<br/><em>tangible.</em></h1><p>A selection of the projects I work on, including GOAT’ECH products and personal work.</p></section><section className="wrap section project-grid projects-page">{projects.map((project, index) => <ProjectCard key={project.name} project={project} index={index} />)}</section></>;
+}
